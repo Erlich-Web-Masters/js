@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Funcion que crea objetos</title>
+</head>
+<body>
+<p>Se puede crear una funcion que crea objetos...Ademas ecmacScript6 permite una nueva forma de escribir objetos</p>
+	
+	<script>
+ const nombres = (nombre,edad) => {
+		 return {nombre,//Cuando la propiedad es el mismo a su valor se omite
+					edad,
+						 
+		 mostrarDatos(){
+		 return `${nombre} tiene ${edad}`;				
+		}//fin del metodo		 		
+	}//fin del objeto	 
+						
+}//fin de la funcion
+			
+			document.write(nombres("Eva",63).mostrarDatos());
+	</script>
+</body>
+</html>

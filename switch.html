@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let dia = prompt(`Segun el dia estudia una tecnologia:<br>
+     Lunes y Jueves:JS, 
+     Martes y Viernes: React,
+     Miercoles y Sabado :php y sql 
+      `)
+
+    if(dia == "Lunes" || dia == "Jueves"){
+      document.write(`<h1>Hoy toca estudiar java Script:</h1>
+       <br>
+       <strong>* Vanilla Js 25min 2 veces <br>
+       * TypeScript 25min 2veces</strong>`)
+    }
+    if(dia == "Martes" || dia == "Viernes"){
+      document.write(`<h1>Hoy toca estudiar React, Next JS</h1>
+       <br>
+       <strong>* React Js 25min 2 veces <br>
+       * NextJS 25min 2veces</strong>`)
+    }
+    if(dia == "Miercoles" || dia == "Sabado"){
+      document.write(`<h1>Hoy toca estudiar PHP, MySQL</h1>
+       <br>
+       <strong>* php 25min 2 veces <br>
+       * php y mysql 25min 2veces</strong>`)
+    }
+    if(dia == ""){
+      document.write(`<h1>Hoy no se estudia</h1>`)
+    }
+
+      
+  </script>
+</body>
+</html>

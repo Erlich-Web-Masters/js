@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Eventos</title>
+</head>
+<body>
+
+<div id="caja" onclick="cambiarColor()"></div>
+<button id="btn">Cambiar</button>
+
+<script>
+  let $caja = document.querySelector("#caja");
+  
+  $caja.style.width = "200px";
+  $caja.style.height = "200px";
+  $caja.style.background = "green";
+  
+  function cambiarColor() {
+  if ($caja.style.background == 'green') {
+  	$caja.style.background = "yellow";
+  }else {
+  	$caja.style.background = "green";
+  }
+  	
+  }
+  
+  let $btn = document.querySelector("#btn");
+  
+  $btn.addEventListener("click",cambiarT)
+  
+  function cambiarT() {
+  if ($caja.style.width == "200px") {
+  	$caja.style.width = "500px";
+  	$caja.style.transition = "1s width ease";
+  	$caja.style.background = "yellow";
+  }else {
+  	$caja.style.width = "200px";
+  	$caja.style.transition = "1s width ease";
+  	$caja.style.background = "green";
+  }
+  	
+  }
+</script>
+</body>
+</html>

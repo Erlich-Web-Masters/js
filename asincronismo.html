@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+
+<script>
+//*Operaciones asíncronas*
+//tareas de futuro
+//modificar dom
+//mostrar un alert
+//Un pedido de datos a una API externa
+let nombre = 'Erlich'
+console.log('a')
+function info(nombre){
+	return `Mi nombre es ${nombre} y tiene este ${nombre.length} largo`
+}
+setTimeout(() => console.log('b'),2000) // Este función se pone en la lista de tareas de js espera aque la código principal se ejecute
+console.log(info('Yubisay'))
+console.log('c')
+</script>
+</body>
+</html>

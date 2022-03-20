@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+      var numero1 = 5;
+      var numero2 = 10;
+
+      document.write(numero1 + numero2 + "<br>");
+
+      var texto = "Hola";
+      var texto2 = "Mundo";
+      var mensaje = "Creer en mi mismo";
+
+      document.write(texto + " "+ texto2 + "<br>");
+      document.write(mensaje +"<br>");
+
+      var ventana = true;
+      var ventana2 = false;
+
+      document.write(ventana, ventana2 + "<br>");
+
+      var array = ["rojo", "amarillo", "verde"];
+      document.write(array[0] + " "+ array[1] + "" +array[2] + "<br>");
+
+      var obj = {
+        nombre:"Erlich",
+        apellidos:"Rodriguez",
+        caminar(){
+          console.log("caminado...");
+        }
+      }
+
+      document.write(obj.nombre + " " + obj.apellidos + "<br>");
+     obj.caminar()
+    </script>
+  </body>
+</html>

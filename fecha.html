@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+
+<script>
+function diaEntreFechas(fecha1,fecha2) {
+	const unDia = (1000 * 60 * 60 * 24)
+	const diferencia = Math.abs(fecha1 - fecha2)//match.abs toma un valor absoluto es decir si es negativo lo convierte a positivo
+	return Math.floor(diferencia / unDia) // aquí se redondea
+}
+
+const hoy = new Date()
+console.log(hoy)
+const nacimiento = new Date(1944,10,7)
+console.log(nacimiento)
+
+const diferenciaDia = diaEntreFechas(hoy,nacimiento)
+console.log(`Has vivido ${diferenciaDia}`)
+console.log('Tiene esta' + diferenciaDia / 365 + 'edad')//edad
+
+</script>
+</body>
+</html>

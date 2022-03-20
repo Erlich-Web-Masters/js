@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Promesas en Js</title>
+</head>
+<body>
+
+<script>
+	const promesa = new Promise((resolve,reject) => {
+  //validando
+	//Accion que se ejecutara
+  
+	}) 
+	
+	//si la accion se completa correctamente ejecuta
+	promesa.then((mensaje) =>{
+			
+	})
+	//si la accion es incorrecta se ejecuta
+	promesa.catch(() => {
+			
+	})
+			
+	//ejemplo
+  function cuadradoPromise(value){
+    if(typeof value !== Number) return Promise.reject
+
+    return new Promise((resolve,reject) => {
+      setTimeout(() => {
+        resolve({
+          value,
+          result: value * value
+        })
+      }),0|Match.random() * 100
+    })
+  }
+
+    
+</script>
+</body>
+</html>

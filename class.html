@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JavaScript Orientado a Objetos</title>
+</head>
+<body>
+
+
+<script>
+	class Usuario{
+		
+		constructor(nombre,edad,correo){
+			this.nombre = nombre;
+			this.edad = edad;
+			this.correo = correo;
+					
+		}
+		
+		mostrarTodo(){
+				
+		return `<b>nombre :</b>${this.nombre}
+					<br/>
+					<b>edad :</b>${this.edad}
+					<br/>
+					<b>correo:</b>${this.correo}  
+					<hr/>
+					`;		
+		}
+	}
+	
+	class Estudiante extends Usuario{
+		constructor(nombre,edad,correo,carrera){
+					super(nombre,edad,correo);
+					this.carrera = carrera;
+		}
+		
+			mostrarTodo(){
+				
+		return `<b>nombre :</b>${this.nombre}
+					<br/>
+					<b>edad :</b>${this.edad}
+					<br/>
+					<b>correo:</b>${this.correo} 
+					<br/>
+					<b>carrera:</b>${this.carrera} 
+					<hr/>
+					`;				
+					
+	}
+	}
+	const erlich = new Usuario('Erlich Airam',6,'correo@correo.cu');
+	document.write(erlich.mostrarTodo());
+	
+	const erlichP = new Usuario('Erlich',30,'correo@correo.cu');
+	document.write(erlichP.mostrarTodo());
+	
+	const brandy = new Estudiante('Brandy',20,'brandy@correo.cu','medicina');
+	document.write(brandy.mostrarTodo());
+	
+  	
+	
+</script>
+</body>
+</html>

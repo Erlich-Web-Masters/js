@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metodos Array</title>
+</head>
+<body>
+  
+  <script >
+    const mascotas = ['Chichi','Cachimba','Cacharro'];
+
+    //Muestra true si encuentra una palabra
+    console.log(mascotas.includes('Chichi'));
+
+    //recorre una array buscando coincidencias 
+    console.log(mascotas.find( () => mascotas.length <= 5));
+
+    //recorre una array y muestra el indice de la coincidencia
+    console.log(mascotas.findIndex( perro => perro === 'Cacharro'));
+///////////////////////////////////////////////////////////////////
+    let numeros = [1,2,3,4,5,6,7,8,9];
+
+    //Recorre una array y como su nombre lo indica lo filtra  
+    //No modifica el arraglo sino que crea una copia de este..inmutable
+    //Se usa en la Programacion funcional
+    const numero = numeros.filter(x => x < 5);
+    console.log(numero);
+
+    const animales = [
+      {nombre:'Sacha',raza:'perro'},
+      {nombre:'Chichi',raza:'perro'},
+      {nombre:'Tom',raza:'gato'},
+      {nombre:'Quira',raza:'perro'},
+      {nombre:'Pelusa',raza:'gato'}
+      ]
+
+     const perro = animales.filter( x => x.raza == 'perro') 
+     console.log(perro);
+     const gato = animales.filter(x => x.raza == 'gato')
+     console.log(gato);
+    //////////////////////////////////////////////////////////////////
+     //map recorre y devuelve una copia de un arreglo pero con los cambios a cada uno de sus elementos que diga en su collback 
+    const n = [1,2,3,4,5]
+    const nDobles = n.map( x => x*2)
+    console.log(nDobles);
+    //si queremos obtener parejas 
+    const parejas = n.map(x => [x,x])
+    console.log(parejas);
+    //calculemos el promedio de edades de un objeto
+    const nenes = [
+      {nombre:'Erlich',edad:7},
+      {nombre:'Diego',edad:3},
+      {nombre:'Davis',edad:5},
+      {nombre:'Ana Maura',edad:4} 
+    ]
+    //primero obtenemos las edades
+    const edades = nenes.map( x => x.edad)
+    //calculamos el promedio primero sumamos y luego dividimos por la cantidad para sumar usamos reduce
+    //reduce(acumulador,valor Actual) => nuevo Acumulador , valor inicial
+    const suma = edades.reduce( (ac,el) => ac + el)
+    console.log(suma / 4);
+    
+    //Otros ejemplos con reduce 
+    //Para indexar un objeto
+    const indexed = nenes.reduce( (ac, el) => ({
+      ...ac,
+      [el.nombre]:el,
+    }) , {})
+    console.log(indexed)
+    console.log(indexed['Erlich'])
+
+    //Ejemplo con reduce de como poner a un mismo plano un array anidado
+    const anidado = [1,[2,3],4,[5]]
+
+    const plano = anidado.reduce((ac, el) => ac.concat(el),[])
+    console.log(plano);
+
+
+  </script>
+</body>
+</html>

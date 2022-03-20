@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Intervalos de Tiempos</title>
+</head>
+<body>
+<h1>Espera...<div id="tiempo"> 0</div></h1>
+
+<script>
+var $tiempo = document.querySelector('#tiempo');
+var segundo = 0;
+
+var intervalo = setInterval( () => {
+  $tiempo.innerHTML = segundo ++
+},1000)
+
+setTimeout( () => {
+  clearInterval(intervalo)
+  document.write(`<h1>Mongoooooo</h1>`)
+},10000)
+
+</script>
+</body>
+</html>
